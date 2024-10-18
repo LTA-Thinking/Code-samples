@@ -5,11 +5,59 @@
  */
 
 class BlogPost {
+    title;
+    content;
+
+    constructor(definition){
+    this.title = definition.title;
+    this.content = definition.content;
+}
+
+drawContent(element){
+    var titleTag = document.createElement("div");
+    titleTag.innerText = this.title;
+    element.appendChild(titleTag);
+
+    var contentTag = document.createElement("div");
+    contentTag.innerText = this.content;
+    element.appendChild(contentTag);
+
+    element.appendChild(document.createElement("hr"));
 
 }
 
+static createPost(definition){
+    if(definition.type == "text"){
+        return new BlogPost(definition);
+    }
+    else if(definition.type == "image"){
+        return new imagePost(definition);
+    }
+}
+
+}
+
+class imagePost extends BlogPost{
+    drawContent(element){
+        var titleTag = document.createElement("div");
+        titleTag.innerText = this.title;
+        element.appendChild(titleTag);
+    
+        var contentTag = document.createElement("img");
+        contentTag.src = this.content;
+        contentTag.width = 500;
+        element.appendChild(contentTag);
+    
+        element.appendChild(document.createElement("hr"));
+    }
+}
+
+
 var display = document.getElementById("display");
 posts.forEach(postDefinition => {
+    var post = BlogPost.createPost(postDefinition);
+    console.log(post.title);
+    post.drawContent(display);
     // Display the posts...
 });
 
