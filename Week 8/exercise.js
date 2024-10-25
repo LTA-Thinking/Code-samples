@@ -4,6 +4,11 @@
  */
 
 var display = document.getElementById("display");
+function appendLine(text)
+{
+    display.innerHTML += text;
+    display.innerHTML += "<br/><br/>";
+}
 
 /*************************** Conditionals *************************/
 
