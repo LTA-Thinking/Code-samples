@@ -1,0 +1,39 @@
+.header {
+    margin: auto;
+    width: 80%;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.header h1 {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+.content {
+    margin: auto;
+    width: fit-content;
+    text-align: justify;
+    width: 80%;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.content p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.picture {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.settings {
+    display: inline;
+}
