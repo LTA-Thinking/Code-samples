@@ -1,0 +1,17 @@
+body {
+    color: black;
+    background-color: #b3c7f7;
+}
+
+.header {
+    color: white;
+    background-color: #0073e6;
+}
+
+.settings select {
+    background-color: white;
+}
+
+.content {
+    background-color: #8babf1;
+}
