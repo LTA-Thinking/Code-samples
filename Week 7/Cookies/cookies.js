@@ -6,4 +6,12 @@ var cookieName = "cis-2140-text-cookie";
 
 function setCookie(event)
 {
+    document.cookie = cookieName + "=" + event.target.value;
 }
+
+var cookieValue = document.cookie
+                            .split("; ")
+                            .find((value) => value.startsWith(cookieName))
+                            ?.split("=")[1];
+var display = document.getElementById("display");
+display.innerText = cookieValue;
