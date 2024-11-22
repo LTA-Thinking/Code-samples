@@ -8,3 +8,7 @@
 .disabled {
     background-color: lightgrey;
 }
+
+.flagged {
+    background-color: red;
+}
